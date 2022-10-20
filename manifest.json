@@ -4,7 +4,7 @@
     "name": "Algo timer",
     "action": {
         "default_popup": "index.html",
-        "default_icon": "logo-algo-RGB-short-white.png"
+        "default_icon": "logo.png"
     },
     
     "permissions": [

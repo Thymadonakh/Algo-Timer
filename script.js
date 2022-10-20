@@ -6,6 +6,7 @@ const twentyMinutesBtn = document.querySelector(".btn-20m");
 const fifteenMinutesBtn = document.querySelector(".btn-15m");
 const tenMinutesBtn = document.querySelector(".btn-10m");
 const fiveMinutesBtn = document.querySelector(".btn-5m");
+var audio = new Audio("time.mp3");
 
 const stopTimer = document.querySelector(".stop-timer");
 const countDownEl = document.getElementById("countdown");
@@ -21,6 +22,7 @@ function updateCountDown() {
   time--;
 
   if (time <= 0) {
+    audio.play();
     stop();
   }
 }
@@ -54,7 +56,7 @@ tenMinutesBtn.addEventListener("click", () => {
 });
 
 fiveMinutesBtn.addEventListener("click", () => {
-  startingMinutes = 5;
+  startingMinutes = 1;
   time = startingMinutes * 60;
   t = setInterval(updateCountDown, 1000);
   hideBtn();
